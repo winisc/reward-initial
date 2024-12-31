@@ -1,0 +1,303 @@
+@font-face { font-family: 'thin'; src: url('fonts/thin.ttf') format('truetype'); }
+@font-face { font-family: 'regular'; src: url('fonts/regular.ttf') format('truetype'); }
+@font-face { font-family: 'bold'; src: url('fonts/bold.ttf') format('truetype'); }
+
+* {
+    user-select: none;
+}
+
+body {
+    font-family: 'bold';
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.container {
+    z-index: 2; 
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    animation: fadeContent ease 2s;
+    position: relative;
+    width: 60vw;
+    height: 22vw;
+    background-color: rgba(0, 0, 0, 0.932);
+    border-radius: 1vw;
+    border: solid 0.18vw #f5d222;
+    display: none;
+    justify-content: center;
+    gap: 4vw;
+    align-items: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    background-image: 
+        url('./img/logo.png'); /* Gradiente sobre a imagem */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    background-blend-mode: overlay; 
+}
+
+.card .title {
+    position: absolute;
+    padding: 10px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    text-align: center;
+    width: max-content;
+    top: 4%;
+    border-radius: .6vw;
+    background: linear-gradient(45deg, #ffae00, #f5d222);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2vw;
+    letter-spacing: .05vw;
+}
+
+.button{
+    margin-top: 4vw;
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    width: max-content;
+    z-index: 3;
+    width: 9.5vw;
+    height: 1.4vw;
+    border-radius: 0.7vw;
+    border: solid 0.12vw #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#title-player{
+    animation: fadeContent ease 1s;
+}
+
+#description-player{
+    animation: fadeContent ease 2s;
+    top: 30%;
+    font-size: 1.5vw;
+    color: white;
+}
+
+.beneficios{
+    animation: fadeContent ease 1.5s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6.5%;
+    gap: 2vw;
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-radius: 0.5vw;
+    border: solid 0.05vw #f5d222;
+    display: flex;
+    justify-content: center;
+    gap: 2.5vw;
+    align-items: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    width: max-content;
+    overflow: hidden;
+    max-width: 15vw;
+    padding: 5px;
+    font-size: 1vw;
+}
+
+#description-vip{
+    display: none;
+    right: 65%;
+    top: 51.5%;
+}
+
+#description-car{
+    display: none;
+    left: 65%;
+    top: 51.5%;
+}
+
+.pacote {
+    position: relative;
+    width: 6.5vw;
+    height: 4.3vw;
+    background-color: rgb(22, 22, 22);
+    border-radius: 1vw;
+    border: solid 0.12vw #7ac517;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.pacote:hover {
+    transform: scale(1.02);
+    
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    background-color: rgb(34, 34, 34);
+    border: solid 0.14vw #f5d222;
+}
+
+.pacote .img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+#resgatar{
+    animation: fadeContent ease 1.5s;
+    top: 26%;
+    width: 12vw;
+    height: 1.8vw;
+    background-color: #000000;
+    font-size: 1.4vw;
+}
+
+#title-car{
+    top: 8%;
+    font-size: 2.5vw;
+    display: none;
+}
+
+.car {
+    margin-top: 9%;
+    position: relative;
+    width: 13vw;
+    height: 9vw;
+    background-color: rgb(22, 22, 22);
+    border-radius: 1vw;
+    border: solid 0.12vw #f5d222;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.car:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
+    background-color: rgb(34, 34, 34);
+    border: solid 0.14vw #ffd900;
+}
+
+.car .img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.title-vehicle{
+    display: none;
+    position: absolute;
+    padding: 5px;
+    text-align: center;
+    width: max-content;
+    top: 40%;
+    border-radius: .3vw;
+    border: solid 0.1vw #ffffff;
+    font-size: 2vw;
+    background-color: #0000009d;
+    width: 6vw;
+    font-size: 1vw;
+    color: rgb(255, 255, 255);
+}
+
+.checkout {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    width: max-content;
+    margin-top: 4.7vw;
+    z-index: 3;
+    width: 15vw;
+    height: 5vw;
+    background-color: rgb(22, 22, 22);
+    border-radius: 1vw;
+    border: solid 0.10vw #ffffff;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    box-shadow: 0 0 0.5vw rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    top: 100%;
+}
+
+.checkout .title{
+    position: absolute;
+    top: 15%;
+    font-size: .8vw;
+    color: #ffffff;
+}
+
+#confirm{
+    margin-top: 3vw;
+    border: solid 0.14vw #ffffff;
+    border-radius: .4vw;
+    width: 5vw;
+    height: .1vw;
+    font-size: .7vw;
+    background-color: rgb(64, 221, 16);
+}
+
+#cancel{
+    margin-top: 3vw;
+    border: solid 0.14vw #ffffff;
+    border-radius: .4vw;
+    width: 5vw;
+    height: .1vw;
+    font-size: .7vw;
+    background-color: rgb(221, 30, 16);
+}
+
+.button:hover {
+    transform: scale(1.07);
+    border: solid 0.14vw #ffffff;
+}
+
+@keyframes fadeContent {
+    0% { opacity: 0; transform: scale(0); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeContentOut {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0); }
+}

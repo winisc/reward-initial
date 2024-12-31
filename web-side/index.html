@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div id='title-player' class="title">OLÁ JOGADOR, SEJA BEM-VINDO(A) A <br>TRINITY ROLEPLAY.</div>
+                <div id='description-player' class="title">TEMOS UM PRESENTE ESPECIAL AGUARDANDO VOCÊ!<br></div>
+                
+                <div class="beneficios">
+                    <div class="pacote">
+                        <img class='img' src="./img/vipnobre.png" alt="vip" onMouseOut="popupDescriptionOut('vip')" onMouseOver="popupDescriptionOn('vip')"/>
+                    </div>
+                    <div class="pacote">
+                        <img class='img' src="./img/camaro.png" alt="camaro" onMouseOut="popupDescriptionOut('car')" onMouseOver="popupDescriptionOn('car')"/>
+                    </div>
+                </div>
+
+                <div id='description-vip' class="description">VIP NOBRE POR 30 DIAS</div>
+                <div id='description-car' class="description">CARRO TIER 1 POR 30 DIAS</div>
+
+                <div id="resgatar"class="button" onClick="resgatar()">RESGATAR</div>
+
+                <div id='title-car' class="title">ESCOLHA O SEU CARRO VIP</div>
+
+                <div id ='camaro' class="car" onClick="camaro()" onMouseOut="popupDescriptionOut('camaro')" onMouseOver="popupDescriptionOn('camaro')">
+                    <img class='img' src="./img/camaro.png" alt="camaro"/>
+                    <div id='title-camaro' class="title-vehicle">CAMARO</div>
+                </div>
+                <div id ='lancerx' class="car" onClick="lancerx()" onMouseOut="popupDescriptionOut('lancerx')" onMouseOver="popupDescriptionOn('lancerx')">
+                    <div id='title-lancerx' class="title-vehicle">LANCER X</div>
+                    <img class='img' src="./img/lancerx.png" alt="lancerx"/>
+                </div>
+                <div id ='bmwm2' class="car" onClick="bmwm2()" onMouseOut="popupDescriptionOut('bmwm2')" onMouseOver="popupDescriptionOn('bmwm2')">
+                    <div id='title-bmwm2' class="title-vehicle">BMW M2</div>
+                    <img class='img' src="./img/bmwm2.png" alt="bmwm2"/>
+                </div>
+            </div>
+
+            <div class="checkout">
+                <div id='checkout-confirm' class="title">Confirmar vehiclename <br>na sua garagem ?</veichle></div>
+                <div id="cancel" class="button" onClick="cancel()">CANCELAR</div>
+                <div id="confirm" class="button"  onClick="confirm()">CONFIRMAR</div>
+            </div>
+        </div>
+    </body>
+</html>
+
